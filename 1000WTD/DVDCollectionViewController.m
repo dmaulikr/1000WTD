@@ -46,10 +46,6 @@
     [super viewDidLoad];
     _array = [[DVDArrayModels alloc] init];
     self.title = @"Ways To Die";
-    
-    
-
-    
 }
 
 #pragma DataSource
@@ -80,16 +76,11 @@
    // cell.photo.layer.borderColor = [UIColor whiteColor].CGColor;
     
     cell.photo.clipsToBounds = YES;
-    
-    
-    
-    
     return cell;
 }
 
 #pragma marc DVDCollectionViewControllerDelegate
 -(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     
     DVDWayToDieModel *model = nil;
     model = [self.array modelAtIndex:indexPath.row];
@@ -107,11 +98,5 @@
     
     return UIEdgeInsetsMake(11.0f, 9.0f, 11.0f, 9.0f);
 }
-
-
-
-
-
-
 
 @end

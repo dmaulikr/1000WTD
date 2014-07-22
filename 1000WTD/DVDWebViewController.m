@@ -22,16 +22,10 @@
 
         
         _model = aModel;
-        
-        
     }
-    
-    
     return  self;
-    
-    
-    
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,6 +33,18 @@
     [self.browser loadRequest:[NSURLRequest requestWithURL:self.model.url]];
     
     
+}
+
+- (NSUInteger) supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (UIInterfaceOrientation) preferredInterfaceOrientationForPresentation{
+    UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
+    if (UIInterfaceOrientationIsLandscape(orient)) {
+        return orient;
+    }
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
 -(BOOL)webView:(UIWebView *)webView
@@ -53,10 +59,6 @@ navigationType:(UIWebViewNavigationType)navigationType{
     }else{
         return YES;
     }
-    
-    
-    
-    
 }
 
 @end

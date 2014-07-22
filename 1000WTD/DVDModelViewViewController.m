@@ -29,8 +29,6 @@
     }
     return self;
     
-  
-    
 }
 
 
@@ -67,12 +65,6 @@
     //añadirlo a la vista
     
     [self.view addGestureRecognizer:tap];
-    
-
-
-    
-    
-    
 }
 
 #pragma animations
@@ -205,10 +197,7 @@
         
     }
     
-    
 }
-
-
 
 #pragma mark -syncronizer
 
@@ -237,13 +226,6 @@
     self.victima.text = @"Victima:";
     self.descripcionTitle.text = @"Descripción:";
     self.muertePor.text = @"Muerte:";
-    
-    
-    
-    
-    
-    
-    
 }
 
 - (IBAction)url:(id)sender{
@@ -254,10 +236,10 @@
     
     DVDWebViewController *browser = [[DVDWebViewController alloc] initWithModel:model2];
     
+    //[self.navigationController presentViewController:browser animated:YES completion:^{
+    //
+    //}];
     [self.navigationController pushViewController:browser animated:YES];
-    
-    
-    
 }
 
 #pragma mark - UIWebViewDelegate

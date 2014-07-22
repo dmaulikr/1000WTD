@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F189E42197EE01E001DDA6A /* PRPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F189E41197EE01E001DDA6A /* PRPNavigationViewController.m */; };
 		841CCD8119264D48005C55F8 /* avioneta.png in Resources */ = {isa = PBXBuildFile; fileRef = 841CCD8019264D48005C55F8 /* avioneta.png */; };
 		84437179191D0CD700B2B202 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84437178191D0CD700B2B202 /* Default-568h@2x.png */; };
 		8443718619220B3200B2B202 /* DVDModelViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443718419220B3200B2B202 /* DVDModelViewViewController.m */; };
@@ -102,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F189E40197EE01E001DDA6A /* PRPNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPNavigationViewController.h; sourceTree = "<group>"; };
+		5F189E41197EE01E001DDA6A /* PRPNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPNavigationViewController.m; sourceTree = "<group>"; };
 		841CCD8019264D48005C55F8 /* avioneta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avioneta.png; sourceTree = "<group>"; };
 		84437175191D0C3300B2B202 /* WTD_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WTD_120x120.png; sourceTree = "<group>"; };
 		84437176191D0C8600B2B202 /* WTD_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WTD_80x80.png; sourceTree = "<group>"; };
@@ -392,6 +395,8 @@
 				8443718819221D5D00B2B202 /* DVDWebViewController.h */,
 				8443718919221D5D00B2B202 /* DVDWebViewController.m */,
 				8443718A19221D5D00B2B202 /* DVDWebViewController.xib */,
+				5F189E40197EE01E001DDA6A /* PRPNavigationViewController.h */,
+				5F189E41197EE01E001DDA6A /* PRPNavigationViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84791964191CD83700D88A11 /* main.m in Sources */,
+				5F189E42197EE01E001DDA6A /* PRPNavigationViewController.m in Sources */,
 				84791992191CE1EE00D88A11 /* DVDArrayModels.m in Sources */,
 				8443718619220B3200B2B202 /* DVDModelViewViewController.m in Sources */,
 				84791968191CD83700D88A11 /* DVDAppDelegate.m in Sources */,
