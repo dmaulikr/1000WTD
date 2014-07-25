@@ -54,12 +54,9 @@
     return [self.array arrayCount];
 }
 
-
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
-    
 }
-
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     

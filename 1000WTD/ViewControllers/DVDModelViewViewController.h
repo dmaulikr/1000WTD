@@ -46,7 +46,7 @@
 
 
 
-- (IBAction)url:(id)sender;
+//- (IBAction)url:(id)sender;
 
 -(id) initWithModel: (DVDWayToDieModel *) aModel;
 

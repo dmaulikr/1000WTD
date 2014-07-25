@@ -7,7 +7,6 @@
 //
 
 #import "PRPNavigationViewController.h"
-#import "DVDWebViewController.h"
 
 @interface PRPNavigationViewController ()
 
@@ -45,7 +44,7 @@
 {
     int interfaceOrientation = 0;
     
-    if (self.viewControllers.count > 0)
+    /*if (self.viewControllers.count > 0)
     {
         //DLog(@"%@", self.viewControllers);
         UIViewController *viewController = [self.viewControllers lastObject];
@@ -61,6 +60,8 @@
             }
         }
     }
+    */
+    interfaceOrientation = UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
     return interfaceOrientation;
 }
 /*

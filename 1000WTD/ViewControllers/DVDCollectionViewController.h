@@ -10,12 +10,5 @@
 @class DVDArrayModels;
 @class DVDWayToDieModel;
 
-
-
 @interface DVDCollectionViewController : UICollectionViewController <UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
-
-
-
-
-
 @end

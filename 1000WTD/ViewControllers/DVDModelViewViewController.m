@@ -8,7 +8,7 @@
 
 #import "DVDModelViewViewController.h"
 #import "DVDWayToDieModel.h"
-#import "DVDWebViewController.h"
+//#import "DVDWebViewController.h"
 
 @interface DVDModelViewViewController ()
 
@@ -16,16 +16,12 @@
 
 @implementation DVDModelViewViewController
 
-@synthesize scrollview;
-
 -(id) initWithModel: (DVDWayToDieModel *) aModel{
     
     
     if (self = [super initWithNibName:nil
                                bundle:nil]) {
-        
         _model = aModel;
-        
     }
     return self;
     
@@ -35,8 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [scrollview setScrollEnabled:YES];
-    [scrollview setContentSize:CGSizeMake(250, 800)];
 
     
     [self syncModelWithView];
@@ -50,20 +44,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(userDidTap:)];
     
-    
-    
-   /*UISwipeGestureRecognizer *upRecognizer= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [upRecognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
-    
-    UISwipeGestureRecognizer *downRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [downRecognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
-    
-    [self.view addGestureRecognizer:upRecognizer];
-    [self.view addGestureRecognizer:downRecognizer];*/
-    
-    
     //añadirlo a la vista
-    
     [self.view addGestureRecognizer:tap];
 }
 
@@ -74,17 +55,13 @@
     NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
     BOOL switchUpDown = [d boolForKey:@"switchUpDown"];
     
-    
     UISwipeGestureRecognizerDirection up = switchUpDown ? UISwipeGestureRecognizerDirectionUp : UISwipeGestureRecognizerDirectionUp;
     UISwipeGestureRecognizerDirection down = switchUpDown ? UISwipeGestureRecognizerDirectionDown : UISwipeGestureRecognizerDirectionDown;
     
     if (recognizer.direction == up){
-       
-       // CGPoint location = [recognizer locationInView: self.fondo];
+        
+        // CGPoint location = [recognizer locationInView: self.fondo];
         UIViewAnimationOptions opcions = UIViewAnimationOptionBeginFromCurrentState;
-
-       
-
         
         [UIView animateWithDuration:0.3
                               delay:0.3
@@ -96,12 +73,8 @@
                          completion:^(BOOL finished){}];
     } else if(recognizer.direction == down){
         
-        
-        
-        
         CGPoint location = [recognizer locationInView: self.fondo];
         UIViewAnimationOptions opcions = UIViewAnimationOptionBeginFromCurrentState;
-
         
         [UIView animateWithDuration:0.3
                               delay:0.3
@@ -114,14 +87,7 @@
                              
                          }];
     }
-    
 }
-
-
-
-
-
-
 
 -(void) userDidTap: (UIGestureRecognizer *) tap{
     
@@ -228,7 +194,7 @@
     self.muertePor.text = @"Muerte:";
 }
 
-- (IBAction)url:(id)sender{
+/*- (IBAction)url:(id)sender{
     
     DVDWayToDieModel *model2= nil;
     model2 = _model;
@@ -240,27 +206,11 @@
     //
     //}];
     [self.navigationController pushViewController:browser animated:YES];
-}
+}*/
 
 #pragma mark - UIWebViewDelegate
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     [self.activityIndicator stopAnimating];
 }
 
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
